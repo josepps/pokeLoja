@@ -1,9 +1,9 @@
-import { Container } from "./Home.Style"
+import Header from "../../components/Header/Index"
 
 function Home() {
   return (
     <>
-      <Container>Hello Word</Container>
+      <Header />
     </>
   )
 }
