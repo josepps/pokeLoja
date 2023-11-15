@@ -60,6 +60,83 @@ export const HeaderStyle = styled.header`
                 }
             }
         }
+
+        .containerContatoHeader {
+            display: flex;
+            position: relative;
+            padding-bottom: 5px;
+            cursor: default;
+
+            span {
+                margin-right: 5px;
+                font-size: 1.2rem;
+                color: #395AA8;
+            }
+
+            p span {
+                position: relative;
+                top: 10%;
+                color: #000;
+                font-size: 0.8rem;
+            }
+
+            .popUpContatoHeader {
+                display: none;
+                width: auto;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: #f5f5f5;
+                padding: 7% 20%;
+                border-radius: 6px;
+                white-space: nowrap;
+                text-align: center;
+
+                &::before {
+                    content: "";
+                    width: 0; 
+                    height: 0; 
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-bottom: 7px solid #f5f5f5;
+                    position: absolute;
+                    bottom: 99%;
+                    right: 15px;
+                }
+
+                h5 {
+                    font-size: 1rem;
+                    margin-bottom: 5px;
+                }
+
+                a p {
+                    border-bottom: 1px #c8c8c8 solid;
+                    padding-bottom: 7px;
+                    margin-bottom: 10px;
+                    color: #000;
+
+                    span {
+                        font-size: 1.3rem;
+                        position: relative;
+                        top: 5px;
+                    }
+
+                    &:hover {
+                        color: #a0a0a0;
+                    }
+                }
+
+                p {
+                    color: #a0a0a0;
+                }
+            }
+
+            &:hover {
+                .popUpContatoHeader {
+                    display: block;
+                }
+            }
+        }
     }
 
     .navHeader {
